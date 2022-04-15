@@ -19,11 +19,14 @@ public:
 protected:
   void Init();
   void Update();
-
-private:
-  // Mesh
-  ObjectMeshDynamicPtr zombieMesh;
   
+  void GoToPlayer();
+  float objectTransition(point1, point2, speed);
+private:
+  ObjectMeshDynamicPtr zombieMesh; // Mesh
+  float walkSpeed; // TODO: Maybe use const?
+
+
   // Animations
   // Still
   // Walk 
